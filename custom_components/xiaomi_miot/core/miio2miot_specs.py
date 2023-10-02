@@ -1092,7 +1092,7 @@ MIIO_TO_MIOT_SPECS = {
     'roborock.vacuum.p5': 'roborock.vacuum.a08',
     'roborock.vacuum.s4': 'roborock.vacuum.t4',
     'roborock.vacuum.s5': 'rockrobo.vacuum.v1',
-    'roborock.vacuum.s5e': 'rockrobo.vacuum.a08',
+    'roborock.vacuum.s5e': 'roborock.vacuum.a08',
     'roborock.vacuum.s6': 'roborock.vacuum.t6',
     'roborock.vacuum.t4': {
         'extend_model': 'roborock.vacuum.t6',
@@ -2374,8 +2374,12 @@ MIIO_TO_MIOT_SPECS = {
             'prop.5.1': {
                 'prop': 'led_b',
                 'setter': True,
-                'template': '{{ value|int(0) > 0 }}',
-                'set_template': '{{ [1 if value else 0] }}',
+                'dict': {
+                    0: 0,   # Bright
+                    1: 1,   # Dim
+                    2: 2,   # Off
+                },
+                'default': 0,
             },
         },
     },
