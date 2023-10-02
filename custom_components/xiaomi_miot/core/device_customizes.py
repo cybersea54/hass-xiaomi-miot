@@ -1299,7 +1299,10 @@ DEVICE_CUSTOMIZES = {
     },
     'zhimi.fan.*': {
         'switch_properties': 'anion,alarm,horizontal_swing,vertical_swing',
-        'number_properties': 'horizontal_angle,vertical_angle,off_delay',
+        'number_select_properties': 'horizontal_swing_included_angle,horizontal_angle,'
+                                    'vertical_swing_included_angle,vertical_angle,off_delay',
+        'select_properties': 'brightness',
+        'button_actions': 'toggle,turn_left,turn_right',
     },
     'zhimi.heater.na1': {
         'switch_properties': 'return_to_middle,alarm',
@@ -1425,7 +1428,7 @@ DEVICE_CUSTOMIZES = {
         'miot_cloud_action': True,
         'sensor_properties': 'memory_card_management.status,storage_free_space,storage_used_space',
         'select_properties': 'night_shot,recording_mode,detection_sensitivity',
-        'switch_properties': 'on,time_watermark,motion_tracking,motion_detection,wdr_mode,glimmer_full_color',
+        'switch_properties': 'time_watermark,motion_tracking,motion_detection,wdr_mode,glimmer_full_color',
         'number_properties': 'image_rollover,alarm_interval',
     },
     '*.cateye.*': {
